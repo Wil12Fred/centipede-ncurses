@@ -2,3 +2,4 @@ snake
 pr
 *.o
 .DS_Store
+tests/test_game

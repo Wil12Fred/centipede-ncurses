@@ -10,7 +10,14 @@ snake: main.cc bala.h funciones.h game.h serpiente.h tanke.h
 pr: pr.cc
 	$(CXX) $(CXXFLAGS) -o $@ pr.cc $(LDLIBS)
 
-clean:
-	rm -f snake pr
+tests/test_game: tests/test_game.cc bala.h funciones.h game.h serpiente.h tanke.h
+	$(CXX) $(CXXFLAGS) -o $@ tests/test_game.cc
 
-.PHONY: all clean
+test: snake tests/test_game
+	./tests/test_game
+	./tests/smoke.sh ./snake
+
+clean:
+	rm -f snake pr tests/test_game
+
+.PHONY: all test clean
