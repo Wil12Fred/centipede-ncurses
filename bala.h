@@ -12,13 +12,13 @@ class bala{
       this->y=y;
     }
     int coor(int z){ // z tamaño de la matriz
-      if((z-x-1)%2==z%2)
+      if(x%2!=z%2) // misma paridad que conv()
         return (z-x-1)*z+y;
       return (z-x-1)*z+(z-y-1);
     }
     void actualizar(int z){
       x+=1;
-      mvaddch(z-x,z-y,'*');
+      mvaddch(z-x,y,'*');
       return;
     }
 };

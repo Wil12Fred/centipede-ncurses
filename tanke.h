@@ -12,14 +12,16 @@ class tanke{
       return;
     }
     int coor(int z){ // z tamaño de la matriz
-      if((z-1)%2==z%2) return (z-1)*z+y;
+      if(z%2!=0) return (z-1)*z+y;
       return (z-1)*z+(z-y-1);
     }
     void actualizar(int z,int dir){
       //*(Z+y+dir)=1;
       //mvaddch(0,y,' ');
       y+=dir;
-      mvaddch(z-0,z-(y),'a');
+      if (y<0) y=0;
+      if (y>z-1) y=z-1;
+      mvaddch(z-0,y,'a');
       return;
     }
     int Get(){

@@ -38,15 +38,20 @@ int main(){
     switch(ch){
       case KEY_RIGHT:
         ba=false;
-        dir=-1;
+        dir=1;
         break;
       case KEY_LEFT:
         ba=false;
-        dir=1;
+        dir=-1;
         break;
       case ' ':
         ba=true;
         dir=0;
+        break;
+      case 'q':
+        ba=false;
+        dir=0;
+        jugar=false;
         break;
       default:
         ba=false;
