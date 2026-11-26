@@ -1,4 +1,4 @@
-# SnakeGame-Ncurses
+# centipede-ncurses
 
 A small terminal shooter in the style of *Centipede*, written in C++ with ncurses for the
 Objects and Data Abstraction course (Objetos y Abstracción de Datos, UCSP, 2016).
